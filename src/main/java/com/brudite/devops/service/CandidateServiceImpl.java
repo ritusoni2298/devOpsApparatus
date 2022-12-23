@@ -31,7 +31,7 @@ public class CandidateServiceImpl implements CandidateService{
             candidate1.setName(candidate.getName());
             candidate1.setTaskCompleted(candidate.getTaskCompleted());
             candidate1.setUsername(candidate.getUsername());
-            candidate1.setYear(candidate.getYear());
+            candidate1.setYearOfEducation(candidate.getYearOfEducation());
             return candidateRepository.save(candidate1);
         }
         throw new ResourceNotFoundException("Candidate with ID "+ id +" not found");

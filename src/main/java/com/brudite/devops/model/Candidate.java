@@ -1,9 +1,7 @@
 package com.brudite.devops.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.List;
@@ -13,6 +11,8 @@ import java.util.Set;
 @Table(name = "candidates")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Candidate extends AuditModel {
 
     @Id
@@ -29,7 +29,7 @@ public class Candidate extends AuditModel {
     String college;
 
     @Column(nullable = false)
-    private String year;
+    private String yearOfEducation;
 
     @Column(name = "stage_status_code")
     private Integer stageStatusCode;
@@ -37,11 +37,15 @@ public class Candidate extends AuditModel {
     @Column
     private Boolean taskCompleted;
 
-    public Candidate(String username, String name, String college, String year, Integer stageStatusCode) {
-        this.username = username;
-        this.name = name;
-        this.college = college;
-        this.year = year;
-        this.stageStatusCode = stageStatusCode;
-    }
+//    public Candidate(String username, String name, String college, String year, Integer stageStatusCode) {
+//        this.username = username;
+//        this.name = name;
+//        this.college = college;
+//        this.yearOfEducation = year;
+//        this.stageStatusCode = stageStatusCode;
+//    }
+//
+//    public Candidate(){
+//
+//    }
 }
