@@ -10,4 +10,4 @@ FROM amazoncorretto:17-alpine-jdk
 WORKDIR /opt/app
 EXPOSE 8080
 COPY --from=builder /opt/app/target/*.jar /opt/app/*.jar
-ENTRYPOINT ["java", "-jar", "/opt/app/*.jar" ]
+ENTRYPOINT ["java", "-jar", "/opt/app/*.ja
